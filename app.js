@@ -28,23 +28,23 @@ app.use(session({
 }))
 
 // var db = pgp('postgres://staceyastewart@localhost:5432/tennis');
-let DATABASE_URL = "postgres://ygtivczbomduwq:b5abd58ebf6467894e1082cf132c1f1b8b4af789a84729377c729277a79a1eff@ec2-107-21-108-204.compute-1.amazonaws.com:5432/dcgsoiivg4s22d"
+var db = pgp('postgres://ygtivczbomduwq:b5abd58ebf6467894e1082cf132c1f1b8b4af789a84729377c729277a79a1eff@ec2-107-21-108-204.compute-1.amazonaws.com:5432/dcgsoiivg4s22d');
 // console.log(process.env.DATABASE_URL)
 // console.log(DATABASE_URL)
 
-var pg = require('pg');
+// var pg = require('pg');
 
-app.get('/db', function (request, response) {
-  pg.connect(process.env.DATABASE_URL, function(err, client, done) {
-    client.query('SELECT * FROM test_table', function(err, result) {
-      done();
-      if (err)
-       { console.error(err); response.send("Error " + err); }
-      else
-       { response.render('pages/db', {results: result.rows} ); }
-    });
-  });
-});
+// app.get('/db', function (request, response) {
+//   pg.connect(process.env.DATABASE_URL, function(err, client, done) {
+//     client.query('SELECT * FROM test_table', function(err, result) {
+//       done();
+//       if (err)
+//        { console.error(err); response.send("Error " + err); }
+//       else
+//        { response.render('pages/db', {results: result.rows} ); }
+//     });
+//   });
+// });
 
 
 
