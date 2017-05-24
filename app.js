@@ -19,6 +19,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(methodOverride('_method')); //method override
 
+
 app.use(session({
   secret: 'TENNISPARTNERS',
   resave: false,
@@ -26,9 +27,10 @@ app.use(session({
   cookie: { secure: false }
 }))
 
-var db = pgp('postgres://staceyastewart@localhost:5432/tennis');
+// var db = pgp('postgres://staceyastewart@localhost:5432/tennis');
+let db = pgp("postgres://ygtivczbomduwq:b5abd58ebf6467894e1082cf132c1f1b8b4af789a84729377c729277a79a1eff@ec2-107-21-108-204.compute-1.amazonaws.com:5432/dcgsoiivg4s22d")
 
-app.listen(3000, function () {
+app.listen(process.env.PORT || 3000, function () {
   console.log('Shoebill Auth App: listening on port 3000!');
 });
 
