@@ -1,0 +1,27 @@
+UP NEXT:
+  Figure out how to append the comments with ajax
+
+COMMENTS:
+post: /comments
+
+ajax:
+  url: /comments
+  method: post
+  data: stuff in your form
+    hint: hidden field for post id
+  success: function(){
+    apend to page(I think)
+  }
+
+button.submit(
+prevent default
+-------
+-------
+-------
+)
+
+
+
+
+
+

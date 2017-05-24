@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Meet Your Match</title>
+
+  <!--Import Google Icon Font-->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="/css/css/materialize.min.css"  media="screen,projection"/>
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- below is my personal stylesheet -->
+  <link href="/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+
+<!-- renders the header -->
+<header>
+<div class="container">
+  <h1 class="#006064 cyan-text text-darken-4">Meet Your Match</h1>
+  {{#logged_in}}
+  <div class="row">
+    <h5 class="col s8 #006064 cyan-text text-darken-4"><span class="flow-text">Where you can meet other tennis enthusiasts</span></h5>
+    <h5 class="col s4 right-align #006064 cyan-text text-darken-4"><span class="flow-text"><a href="/logout">Log Out</a></span></h5>
+  </div>
+  {{/logged_in}}
+
+  {{^logged_in}}
+  <div class="row">
+    <h5 class="col s8 #006064 cyan-text text-darken-4"><span class="flow-text">Where you can meet other tennis enthusiasts</span></h5>
+    <h5 class="col s4 right-align #006064 cyan-text text-darken-4"><span class="flow-text"><a href="/login">Log In/Sign Up</a></span></h5>
+  </div>
+  {{/logged_in}}
+
+  <ul id="dropdown1" class="dropdown-content">
+    <li><a href="/courts/Bronx">Bronx</a></li>
+    <li><a href="/courts/Brooklyn">Brooklyn</a></li>
+    <li><a href="/courts/Manhattan">Manhattan</a></li>
+    <li><a href="/courts/Queens">Queens</a></li>
+    <li><a href="/courts/StatenIsland">Staten Island</a></li>
+    <li><a href="/courts/onlinebooking">Online-Bookable Courts</a></li>
+  </ul>
+
+  <!-- renders nav bar -->
+  <nav class="#00838f cyan darken-3">
+    <div class="nav-wrapper">
+    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      {{#logged_in}}
+        <a class="right" href="/account">User Page &nbsp</a>
+      {{/logged_in}}
+      <ul class="left hide-on-med-and-down">
+        <li><a href="/">Home</a></li>
+        <li><a href="/partners">Find a Tennis Partner</a></li>
+        <li><a class="dropdown-button" href="/courts" data-activates="dropdown1">Find a Tennis Court<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a href="/permits">Current Permit Costs</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="/">Home</a></li>
+        <li><a href="/partners">Find a Tennis Partner</a></li>
+        <li><a href="/courts">Find a Tennis Court</a></li>
+        <li><a href="/permits">Current Permit Costs</a></li>
+      </ul>
+    </div>
+  </nav>
+  <br>
+  <br>
+</div>
+</header>
+
+
+
+
+<main>
+
+    <!-- If not logged in -->
+  {{^logged_in}}
+    <div class="container">
+      <div class="row">
+      <div class="col s12 center-align #f50057 pink-text text-accent-3">Please <a href="/login">login</a> or <a href="/signup">signup</a> for access to the player forums! </div>
+    </div>
+    <div class="row center-align">
+      <img class="responsive-img" src="http://www.cycladbuildings.com.au/pics/37/37498b.jpg">
+    </div>
+    </div>
+  {{/logged_in}}
+
+
+  <!-- if logged in -->
+  {{#logged_in}}
+
+  <div class="container">
+
+  <div class="row">
+    <div class="col s12 center-align #f50057 pink-text text-accent-3">Would you like to <a href="/partners/new">write a new post </a>or <a href="/partners/all">view all current posts</a> </div>
+  </div>
+  <br>
+  <br>
+
+  <div class="row center-align">
+    <div class="col s4 offset-s2"><span class="flow-text">Singles</span></div>
+    <div class="col s4"><span class="flow-text">Doubles</span></div>
+
+  </div>
+  <div class="row">
+    <a href="/partners/all/Singles"><img class="col s4 offset-s2 responsive-img" src="http://www.clipartkid.com/images/345/clip-art-tennis-tennis-racket-clip-art-tennis-rackets-and-ball-XoFxur-clipart.png"></a>
+
+    <a href="/partners/all/Doubles"><img class="col s4 responsive-img" src="http://www.allthingsclipart.com/tennis.racket.01.jpg"></a>
+
+  </div>
+  </div>
+
+  {{/logged_in}}
+
+
+
+
+
+
+</main>
+
+<br>
+<br>
+<br>
+<br>
+
+<!-- footer starts here -->
+<div class="container">
+<footer class="page-footer #00838f cyan darken-3">
+<!--   <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">Footer Content</h5>
+        <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+      </div>
+      <div class="col l4 offset-l2 s12">
+        <h5 class="white-text">External Links</h5>
+        <ul>
+          <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+          <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+
+        </ul>
+      </div>
+    </div>
+  </div> -->
+  <div class="footer-copyright">
+    <div class="container">
+    © 2017 Copyright Text
+    <a class="grey-text text-lighten-4 right" href="https://www.usta.com/en/home.html">USTA</a>
+    </div>
+  </div>
+</footer>
+</div>
+
+</body>
+</html>
+
+<script type="text/javascript" src="/js/jquery.js"></script>
+<!-- "https://code.jquery.com/jquery-2.1.1.min.js" -->
+<script type="text/javascript" src="/css/js/materialize.min.js"></script>
+
+<script type="text/javascript" src="/js/script.js"></script>
+
