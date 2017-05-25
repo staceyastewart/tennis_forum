@@ -3,7 +3,9 @@
 
 var fetch = require('node-fetch');
 const pgp = require('pg-promise')();
-var db = pgp('postgres://staceyastewart@localhost:5432/tennis');
+//var db = pgp('postgres://staceyastewart@localhost:5432/tennis');
+let db = pgp('postgres://ygtivczbomduwq:b5abd58ebf6467894e1082cf132c1f1b8b4af789a84729377c729277a79a1eff@ec2-107-21-108-204.compute-1.amazonaws.com:5432/dcgsoiivg4s22d');
+
 let url = "http://www.nycgovparks.org/bigapps/DPR_Parks_001.json";
 let urlOnlineCourts = "https://data.cityofnewyork.us/resource/dr4a-dx5a.json"
 let urlFee="https://data.cityofnewyork.us/resource/jumu-9v4u.json"
