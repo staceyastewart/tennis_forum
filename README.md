@@ -8,9 +8,19 @@ Allows users that are not logged in to view current NYC court permit costs as we
 
 >![photoOfOurApp](public/images/not_logged_in.png)
 
+
 Once users have signed up, they can post in the forum and comment on posts already in the forum. Their user page lists their forum posts, as well as account info.
 
+
 >![photoOfOurApp](public/images/user_page.png)
+
+
+[If you would like to test out the app please go to this link](https://meet-your-match.herokuapp.com/) and use the following login information:
+
+```
+email: test@test.com
+password: password123
+```
 
 
 ### &hearts;  -  Stacey
